@@ -1,0 +1,167 @@
+.btn {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  color: $color-primary;
+  background-color: transparent;
+  text-align: center;
+  transition: background-color 0.4s $easing-expo, color 0.2s $easing-expo;
+  border: 1px solid $color-primary;
+  font-size: $text-paragraphs-small;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: darken($color-primary, 10%);
+    color: $color-p-0-lighter;
+  }
+
+  &--fluid {
+    width: 100%;
+  }
+
+  &--fluid-responsive {
+    width: 300px;
+    @include respond-to("small") {
+      width: 100%;
+    }
+  }
+
+  &--rounded {
+    border-radius: $structure-radius-xsm;
+  }
+
+  &--flex-around {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &--flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &--flex::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 1px;
+    background-color: inherit;
+  }
+
+  &--alt {
+    border: 1px solid $color-p-0-lighter;
+    color: $color-p-0-lighter;
+  }
+
+  &--alt:hover,
+  &--alt:focus,
+  &--alt:active {
+    background-color: rgba($color-p-0-lighter, 0.25);
+  }
+
+  &--fill-alt {
+    border: 1px solid $color-primary;
+    background-color: $color-primary;
+    color: $color-p-0-lighter;
+  }
+
+  &--fill-alt:hover,
+  &--fill-alt:focus,
+  &--fill-alt:active {
+    background-color: $color-primary;
+    color: darken($color-p-0-lighter, 5%);
+  }
+
+  &--fill {
+    border: 1px solid $color-p-0-lighter;
+    background-color: $color-p-0-lighter;
+    color: $color-primary;
+  }
+
+  &--fill:hover,
+  &--fill:focus,
+  &--fill:active {
+    background-color: darken($color-p-0-lighter, 5%);
+    color: $color-primary;
+  }
+
+  &--google {
+    @include add-borders(
+      darken($color-google-red, 20%),
+      $color-google-red,
+      $structure-radius-xsm
+    );
+  }
+
+  &--google:hover,
+  &--google:focus,
+  &--google:active {
+    background-color: darken($color-google-red, 15%);
+  }
+
+  &--facebook {
+    background-color: $color-facebook-blue;
+    @include add-borders(
+      darken($color-facebook-blue, 20%),
+      $color-facebook-blue,
+      $structure-radius-xsm
+    );
+  }
+
+  &--facebook:hover,
+  &--facebook:focus,
+  &--facebook:active {
+    background-color: darken($color-facebook-blue, 15%);
+  }
+
+  &:disabled,
+  &:hover:disabled,
+  &:focus:disabled,
+  &:active:disabled {
+    color: #8b8b8b;
+    background-color: $color-p-1;
+  }
+}
+
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  @extend .btn;
+}
+
+a.btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: fit-content;
+  @include respond-to("x-small") {
+    width: 100%;
+    width: -webkit-fill-available;
+    justify-content: center;
+  }
+}
+
+.btn#delete {
+  pointer-events: none;
+}
+
+.quantity {
+  $box-size: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  *[class^="quantity"] {
+    height: $box-size;
+    width: $box-size;
+    border: 1px solid $color-p-0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

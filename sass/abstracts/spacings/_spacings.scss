@@ -1,0 +1,160 @@
+$class_breakpoints: (
+  "xsm": "660",
+  "sm": "767",
+  "md": "992",
+  "lg": "1200",
+);
+
+$width_types: (
+  "25": "25%",
+  "30": "30%",
+  "35": "35%",
+  "40": "40%",
+  "45": "45%",
+  "50": "50%",
+  "55": "55%",
+  "60": "60%",
+  "65": "65%",
+  "70": "70%",
+  "75": "75%",
+  "80": "80%",
+  "85": "85%",
+  "90": "90%",
+  "95": "95%",
+  "100": "100%",
+);
+
+@each $widthKey, $widthVal in $width_types {
+  .w-#{$widthKey} {
+    width: #{$widthVal};
+  }
+
+  .w- {
+    @each $bpKey, $bpValue in $class_breakpoints {
+      @media screen and (max-width: #{$bpValue}px) {
+        &#{$bpKey}-#{$widthKey} {
+          width: #{$widthVal} !important;
+        }
+      }
+    }
+  }
+}
+
+$spacers: (
+  "m": "margin",
+  "p": "padding",
+);
+
+$sidesAxis: ("x", "y");
+
+$spacingUnits: ("0", "1", "2", "3", "4", "5", "auto");
+
+@each $spacerKey, $spacer in $spacers {
+  @each $num in $spacingUnits {
+    .#{$spacerKey} {
+      @if ($num == "auto") {
+        &-#{$num} {
+          #{$spacer}: auto;
+        }
+        &l-#{$num} {
+          #{$spacer}-left: auto;
+        }
+        &r-#{$num} {
+          #{$spacer}-right: auto;
+        }
+        &t-#{$num} {
+          #{$spacer}-top: auto;
+        }
+        &b-#{$num} {
+          #{$spacer}-bottom: auto;
+        }
+        &x-#{$num} {
+          #{$spacer}-left: auto;
+          #{$spacer}-right: auto;
+        }
+        &y-#{$num} {
+          #{$spacer}-top: auto;
+          #{$spacer}-bottom: auto;
+        }
+      } @else {
+        &-#{$num} {
+          #{$spacer}: #{$num}rem !important;
+        }
+        &l-#{$num} {
+          #{$spacer}-left: #{$num}rem !important;
+        }
+        &r-#{$num} {
+          #{$spacer}-right: #{$num}rem !important;
+        }
+        &t-#{$num} {
+          #{$spacer}-top: #{$num}rem !important;
+        }
+        &b-#{$num} {
+          #{$spacer}-bottom: #{$num}rem !important;
+        }
+        &x-#{$num} {
+          #{$spacer}-left: #{$num}rem !important;
+          #{$spacer}-right: #{$num}rem !important;
+        }
+        &y-#{$num} {
+          #{$spacer}-top: #{$num}rem !important;
+          #{$spacer}-bottom: #{$num}rem !important;
+        }
+      }
+    }
+  }
+  @each $bpKey, $bpValue in $class_breakpoints {
+    @each $num in $spacingUnits {
+      .#{$spacerKey} {
+        @media screen and (max-width: #{$bpValue}px) {
+          @if ($num == "auto") {
+            &l-#{$bpKey}-#{$num} {
+              #{$spacer}-left: auto !important;
+            }
+            &r-#{$bpKey}-#{$num} {
+              #{$spacer}-right: auto !important;
+            }
+            &t-#{$bpKey}-#{$num} {
+              #{$spacer}-top: auto !important;
+            }
+            &b-#{$bpKey}-#{$num} {
+              #{$spacer}-bottom: auto !important;
+            }
+            &x-#{$bpKey}-#{$num} {
+              #{$spacer}-left: auto !important;
+              #{$spacer}-right: auto !important;
+            }
+            &y-#{$bpKey}-#{$num} {
+              #{$spacer}-top: auto !important;
+              #{$spacer}-bottom: auto !important;
+            }
+          } @else {
+            &-#{$bpKey}-#{$num} {
+              #{$spacer}: #{$num}rem !important;
+            }
+            &l-#{$bpKey}-#{$num} {
+              #{$spacer}-left: #{$num}rem !important;
+            }
+            &r-#{$bpKey}-#{$num} {
+              #{$spacer}-right: #{$num}rem !important;
+            }
+            &t-#{$bpKey}-#{$num} {
+              #{$spacer}-top: #{$num}rem !important;
+            }
+            &b-#{$bpKey}-#{$num} {
+              #{$spacer}-bottom: #{$num}rem !important;
+            }
+            &x-#{$bpKey}-#{$num} {
+              #{$spacer}-left: #{$num}rem !important;
+              #{$spacer}-right: #{$num}rem !important;
+            }
+            &y-#{$bpKey}-#{$num} {
+              #{$spacer}-top: #{$num}rem !important;
+              #{$spacer}-bottom: #{$num}rem !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

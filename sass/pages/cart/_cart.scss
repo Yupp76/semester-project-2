@@ -1,0 +1,64 @@
+.cart .S01 {
+  .container {
+    display: grid;
+    grid-template-columns: 2fr auto;
+    gap: 2.5rem;
+    @include respond-to("medium") {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .container h1 {
+    grid-column: 1 / span 2;
+    @include respond-to("medium") {
+      grid-column: initial;
+    }
+  }
+
+  .container aside {
+    background-color: $color-p-0;
+    padding: 2rem;
+    max-width: 450px;
+    width: 100%;
+    height: fit-content;
+    @include respond-to("medium") {
+      max-width: 500px;
+      margin: auto;
+    }
+  }
+
+  .container .d-flex {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .container .productsList {
+    @include respond-to("medium") {
+      display: grid;
+      grid-template-rows: auto;
+      gap: 2rem;
+    }
+  }
+
+  .container .minProduct {
+    width: 100%;
+    @include respond-to("medium") {
+      max-width: 500px;
+      margin: auto;
+    }
+  }
+
+  .container aside .compoundInput {
+    margin-top: 0.5rem;
+    @include respond-to("medium") {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  .container aside .compoundInput input {
+    @include respond-to("medium") {
+      width: 100%;
+    }
+  }
+}

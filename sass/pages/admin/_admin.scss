@@ -1,0 +1,43 @@
+.admin .S01 {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    @include respond-to("medium") {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+
+  .minProduct .d-flex {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .editor {
+    top: 0;
+    width: 100%;
+    position: sticky;
+    height: fit-content;
+    padding: 1.25rem 2rem;
+    border: 1px solid $color-borders;
+    display: grid;
+    grid-template-rows: auto;
+    gap: 1rem;
+  }
+
+  .editor .d-flex {
+    max-width: 220px;
+  }
+
+  .editor .compoundInput input {
+    padding-top: initial;
+    padding-bottom: initial;
+  }
+
+  .editor #featured {
+    height: 36px;
+    width: 36px;
+    margin-top: 0.25rem;
+  }
+}

@@ -1,0 +1,75 @@
+/* Color Variabls */
+$color-highlight-1: #fffefa;
+$color-highlight-2: #f8e9bd;
+$color-hover-1: #f5bf90;
+$color-p-6: #f2c94c;
+$color-p-5: #f2994a;
+$color-p-4: #a86a3d;
+$color-p-3: #7b5136;
+$color-p-2: #323334;
+$color-p-1: #222222;
+$color-p-0: #dbd7d5;
+$color-p-0-light: #ebeae8;
+$color-p-0-lighter: #ffffff;
+$color-borders: #d8d8d8;
+$color-borders-error: #f02c20;
+$color-borders-success: #0fbb4a;
+$color-input-bg: #ebeae8;
+$color-error-text: #f54439;
+$color-primary: #323334;
+$color-google-red: #bf2f26;
+$color-facebook-blue: #1e5196;
+
+/* Text-size Variabls */
+$text-h1: 2rem;
+$text-h2: 1.88rem;
+$text-h3: 1.75rem;
+$text-h4: 1.4rem;
+$text-h5: 1.3rem;
+$text-h6: 1.12rem;
+$text-paragraphs: 1rem;
+$text-buttons: 0.969rem;
+$text-paragraphs-md: 0.9rem;
+$text-paragraphs-small: 0.8rem;
+$text-small-caps: 0.8rem;
+$text-line-height-lg: 1.7;
+$text-line-height-md: 1.65;
+$text-line-height-sm: 1.55;
+$text-line-height-xsm: 1.4;
+
+/* Effect Variabls */
+$effect-progress-glow: 0px -0.18115200102329254px 1.222775936126709px #5d5fef14,
+  0px -0.5008620619773865px 3.380819082260132px #5d5fef1f,
+  0px -1.2058829069137573px 8.13970947265625px #5d5fef29,
+  0px -4px 27px #5d5fef3d;
+$effect-smooth-shadow-l1: 0px 0.7246080040931702px 2.354975938796997px #0000000a,
+  0px 2.003448247909546px 6.511207103729248px #0000000d,
+  0px 4.823531627655029px 15.676478385925293px #00000012,
+  0px 16px 22px #0000001c;
+$effect-smooth-shadow-l2: 0px 1.4492160081863403px 4.438223838806152px #00000012,
+  0px 4.006896495819092px 12.27112102508545px #0000001a,
+  0px 9.647063255310059px 29.544132232666016px #00000024,
+  0px 32px 28px #00000036;
+$effect-smooth-shadow-l3: 0px 1.902095913887024px 2.7625679969787598px #0000001a,
+  0px 5.25905179977417px 7.638146877288818px #00000024,
+  0px 12.661770820617676px 18.38971519470215px #00000030,
+  0px 42px 21px #0000004a;
+$effect-shadow-md-1: 0px 8.640000343322754px 15.09000015258789px #0000001e;
+$effect-shadow-md-2: 0px 12.640000343322754px 25.09000015258789px #00000012;
+$effect-shadow-md-3: 0px 9.640000343322754px 20.09000015258789px 7px #00000009;
+
+$structure-radius-circle: 50%;
+$structure-radius-xlg: 1.55rem;
+$structure-radius-lg: 1.25rem;
+$structure-radius-md: 0.85rem;
+$structure-radius-sm: 0.6rem;
+$structure-radius-xsm: 0.37rem;
+
+$easing-expo: cubic-bezier(0.04, 1, 0.85, 1.01);
+
+$breakpoints: (
+  "x-small": 660px,
+  "small": 767px,
+  "medium": 992px,
+  "large": 1200px,
+) !default;

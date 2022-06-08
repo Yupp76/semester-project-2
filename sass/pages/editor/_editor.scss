@@ -1,0 +1,28 @@
+.editor .S01 {
+  .editor {
+    max-width: 500px;
+    width: 90%;
+    margin: auto;
+    height: fit-content;
+    padding: 1.25rem 2rem;
+    border: 1px solid $color-borders;
+    display: grid;
+    grid-template-rows: auto;
+    gap: 1rem;
+  }
+
+  .editor .d-flex {
+    max-width: 220px;
+  }
+  
+  .editor .compoundInput input {
+    padding-top: initial;
+    padding-bottom: initial;
+  }
+
+  .editor #featured {
+    height: 36px;
+    width: 36px;
+    margin-top: 0.25rem;
+  }
+}

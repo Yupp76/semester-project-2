@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="title" content="Modernland" />
+    <meta
+      name="description"
+      content="All the modern home decorations that you need, explore and chose the best items that will make your home place glow in Modernland"
+    />
+    <meta
+      name="keywords"
+      content="home decor, ecommerce, shop, modern forniture "
+    />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="English" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>MODERNLAND | ADMIN</title>
+  </head>
+
+  <body class="admin">
+    <header class="navbar">
+      <nav class="container">
+        <div class="navbar__head">
+          <div class="txt-h5">MODERNLAND</div>
+          <div class="menu txt">
+            <div class="menu__icon">
+              <span class="fas fa-search"></span>
+            </div>
+            <a href="./login.html" class="menu__icon">
+              <span class="fas fa-user"></span>
+            </a>
+            <a href="./cart.html" class="menu__icon">
+              <span class="fas fa-shopping-bag"></span>
+            </a>
+            <div class="menu__icon">
+              <span class="far fa-heart"></span>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="navbar__body">
+          <ul class="menu">
+            <li class="menu__item">
+              <a href="./index.html" class="txt-sm-bold">HOME</a>
+            </li>
+            <li class="menu__item">
+              <a href="./products.html" class="txt-sm-bold">PRODUCTS</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="txt-sm-bold">ACCESSORIES</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="txt-sm-bold">ABOUT US</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="txt-sm-bold">CONTACT US</a>
+            </li>
+            <li class="menu__item">
+              <button class="btn btn--fill-alt">Logout</button>
+            </li>
+          </ul>
+        </div>
+        <hr />
+        <div class="navbar__footer">
+          <ul class="menu">
+            <li class="menu__coumpound">
+              <span class="txt-h5 fas fa-truck"></span>
+              <p class="txt-sm">FREE SHIPPING</p>
+            </li>
+            <li class="menu__coumpound">
+              <span class="txt-h5 fas fa-hand-holding-usd"></span>
+              <p class="txt-sm">100% MONEY BACK</p>
+            </li>
+            <li class="menu__coumpound">
+              <span class="txt-h5 fas fa-headset"></span>
+              <p class="txt-sm">SUPPORT 24/7</p>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="container mb-1">
+      <hr />
+    </div>
+
+    <section class="S01 py-5">
+      <div class="container">
+        <form id="editor" class="editor elevation-1">
+          <h1 class="txt-h6">Add a new Product</h1>
+          <div class="formBox__field">
+            <label for="main_image">
+              <p class="txt-sm-bold">
+                Main Image URL <span class="txt-danger">*</span>
+              </p>
+              <input id="main_image" name="main_image" type="text" />
+              <p id="feedback-main_image" class="field__feedback"></p>
+            </label>
+          </div>
+          <div class="formBox__field">
+            <label for="second_image">
+              <p class="txt-sm-bold">Second Image URL</p>
+              <input id="second_image" name="second_image" type="text" />
+            </label>
+          </div>
+          <div class="formBox__field">
+            <label for="third_image">
+              <p class="txt-sm-bold">Third Image URL</p>
+              <input id="third_image" name="third_image" type="text" />
+            </label>
+          </div>
+          <div class="formBox__field">
+            <label for="title">
+              <p class="txt-sm-bold">Title <span class="txt-danger">*</span></p>
+              <input id="title" name="title" type="text" />
+              <p id="feedback-title" class="field__feedback"></p>
+            </label>
+          </div>
+          <div class="formBox__field">
+            <label for="description">
+              <p class="txt-sm-bold">
+                Description <span class="txt-danger">*</span>
+              </p>
+              <textarea
+                id="description"
+                name="description"
+                type="text"
+              ></textarea>
+              <p id="feedback-description" class="field__feedback"></p>
+            </label>
+          </div>
+          <div class="d-flex">
+            <div class="formBox__field">
+              <label for="price">
+                <p class="txt-sm-bold">
+                  Price <span class="txt-danger">*</span>
+                </p>
+                <div class="compoundInput compoundInput--fluid">
+                  <input
+                    id="price"
+                    name="price"
+                    type="number"
+                    min="1"
+                    step="0.01"
+                  />
+                  <div class="txt-bold">$</div>
+                </div>
+                <p id="feedback-price" class="field__feedback"></p>
+              </label>
+            </div>
+            <div class="formBox__field ml-2">
+              <label for="featured">
+                <p class="txt-sm-bold">Featured</p>
+                <input id="featured" name="featured" type="checkbox" />
+              </label>
+            </div>
+          </div>
+          <hr class="mb-0 mt-1" />
+          <p id="notification" class="txt-sm txt-center txt-muted"></p>
+          <button class="btn btn--fill-alt btn--fluid" type="submit">
+            Add Product
+          </button>
+        </form>
+
+        <div id="productsList" class="productsList">
+          <div class="loader__container">
+            <div class="loader"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer__generic">
+          <h2 class="txt-h4">MODERNLAND</h2>
+          <p class="txt-md my-2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor.
+          </p>
+          <ul>
+            <li class="txt-sm-bold mb-05">121 king street, Melbourne 3000</li>
+            <li class="txt-sm-bold mb-05">+47 3 8376 6284</li>
+            <li class="txt-sm-bold">contact@modernland.com</li>
+          </ul>
+          <ul class="d-flex mt-2">
+            <li><span class="fab fa-facebook-f"></span></li>
+            <li><span class="fab fa-twitter"></span></li>
+            <li><span class="fab fa-instagram"></span></li>
+            <li><span class="fab fa-youtube"></span></li>
+          </ul>
+        </div>
+        <div class="footer__menu mr-2">
+          <h3 class="txt-btn">SHOPPING</h3>
+          <ul>
+            <li class="txt-md mt-1"><a href="#">Your cart</a></li>
+            <li class="txt-md"><a href="#">Your orders</a></li>
+            <li class="txt-md"><a href="#">Compared items</a></li>
+            <li class="txt-md"><a href="#">Wishlist items</a></li>
+            <li class="txt-md"><a href="#">Shipping detail </a></li>
+          </ul>
+        </div>
+        <div class="footer__menu mr-2">
+          <h3 class="txt-btn">USEFULL LINKS</h3>
+          <ul>
+            <li class="txt-md mt-1"><a href="#">Gift Center</a></li>
+            <li class="txt-md"><a href="#">Buying Guides</a></li>
+            <li class="txt-md"><a href="#">New Arrivals</a></li>
+            <li class="txt-md"><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer__menu mr-2">
+          <h3 class="txt-btn">CUSTOMERS</h3>
+          <ul>
+            <li class="txt-md mt-1"><a href="#">Terms of use</a></li>
+            <li class="txt-md"><a href="#">Privacy policy</a></li>
+            <li class="txt-md"><a href="#">Costumer support</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/admin.js" type="module"></script>
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>

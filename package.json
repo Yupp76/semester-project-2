@@ -1,0 +1,39 @@
+{
+  "name": "modernland",
+  "version": "0.0.1",
+  "description": "MODERNLAND",
+  "main": "index.js",
+  "scripts": {
+    "html": "cpx \"*.html\" dist/",
+    "fonts": "cpx fonts/**/* dist/fonts",
+    "js": "cpx js/**/* dist/js",
+    "images": "cpx images/**/* dist/images/",
+    "sass": "node-sass --source-map true sass/style.scss -o dist/css/",
+    "watch-html": "cpx \"*.html\" dist/ --watch",
+    "watch-fonts": "cpx fonts/**/* dist/fonts --watch",
+    "watch-js": "cpx js/**/* dist/js/ --watch",
+    "watch-images": "cpx images/**/* dist/images/ --watch",
+    "watch-sass": "node-sass --source-map true sass/style.scss -wo dist/css/",
+    "clean": "rimraf dist/",
+    "clean-dist": "rimraf dist/**/* !dist/images/ ! dist/images/**/*",
+    "imagemin": "imagemin images/**/* --out-dir=dist/images/",
+    "start": "concurrently \"npm:watch-html\" \"npm:watch-js\" \"npm:watch-images\" \"npm:watch-fonts\" \"npm:watch-sass\" \"npm:serve\"",
+    "build": "npm install && npm run clean-dist && npm run sass && npm run imagemin && npm run fonts && npm run js && npm run html",
+    "serve": "browser-sync start --server \"dist\" --files \"dist\" --port 8081",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "author": "Jim Ree",
+  "license": "MIT",
+  "devDependencies": {
+    "connect-history-api-fallback": "^1.6.0",
+    "imagemin-cli": "^7.0.0",
+    "node-sass": "^6.0.1"
+  },
+  "dependencies": {
+    "browser-sync": "^2.27.5",
+    "concurrently": "^6.3.0",
+    "cpx": "^1.5.0",
+    "gh-pages": "^3.2.3",
+    "rimraf": "^3.0.2"
+  }
+}

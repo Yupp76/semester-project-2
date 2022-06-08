@@ -1,0 +1,134 @@
+.txt-h1 {
+  font-size: $text-h1;
+  line-height: $text-line-height-xsm;
+  font-weight: 800;
+}
+.txt-h2 {
+  font-size: $text-h2;
+  line-height: $text-line-height-xsm;
+  font-weight: 800;
+}
+.txt-h3 {
+  font-size: $text-h3;
+  line-height: $text-line-height-xsm;
+  font-weight: 800;
+}
+.txt-h4 {
+  font-size: $text-h4;
+  line-height: $text-line-height-sm;
+  font-weight: 700;
+}
+.txt-h5 {
+  font-size: $text-h5;
+  line-height: $text-line-height-sm;
+  font-weight: 700;
+}
+.txt-h6 {
+  font-size: $text-h6;
+  line-height: $text-line-height-sm;
+  font-weight: 500;
+}
+.txt-btn {
+  font-size: $text-buttons;
+  line-height: $text-line-height-sm;
+  font-weight: 500;
+}
+.txt {
+  font-size: $text-paragraphs;
+  line-height: $text-line-height-md;
+  font-weight: 400;
+}
+.txt-bold {
+  font-size: $text-paragraphs;
+  line-height: $text-line-height-md;
+  font-weight: 700;
+}
+.txt-md {
+  font-size: $text-paragraphs-md;
+  line-height: $text-line-height-md;
+  font-weight: 400;
+}
+.txt-md-bold {
+  font-size: $text-paragraphs-md;
+  line-height: $text-line-height-md;
+  font-weight: 700;
+}
+.txt-sm {
+  font-size: $text-paragraphs-small;
+  line-height: $text-line-height-md;
+  font-weight: 400;
+}
+.txt-sm-bold {
+  font-size: $text-paragraphs-small;
+  line-height: $text-line-height-md;
+  font-weight: 600;
+}
+.txt-sm-caps {
+  font-size: $text-paragraphs-small;
+  line-height: $text-line-height-md;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.txt-label {
+  color: $color-borders !important;
+}
+.txt-muted {
+  color: darken($color-p-0, 20%) !important;
+}
+.txt-prim {
+  color: $color-primary !important;
+}
+.txt-sec {
+  color: $color-p-4 !important;
+}
+.txt-success {
+  color: $color-borders-success !important;
+}
+.txt-danger {
+  color: $color-borders-error !important;
+}
+.txt-active {
+  color: $color-p-6 !important;
+}
+.txt-no-wrap {
+  white-space: nowrap;
+}
+.txt-underline {
+  text-decoration: underline;
+}
+.txt-center {
+  text-align: center;
+}
+.bg-prim {
+  background-color: $color-p-3;
+}
+.bg-sec {
+  background-color: $color-p-4;
+}
+.border-prim {
+  border: 1px solid $color-borders;
+}
+.border-sec {
+  border: 1px solid $color-p-1;
+}
+.elevation-1 {
+  box-shadow: $effect-shadow-md-1;
+}
+.elevation-2 {
+  box-shadow: $effect-shadow-md-2;
+}
+.elevation-3 {
+  box-shadow: $effect-shadow-md-3;
+}
+.pointer {
+  cursor: pointer;
+}
+.btn-naked {
+  border: 0;
+  background-color: transparent;
+  display: inline-block;
+}
+.d-flex {
+  display: flex;
+  align-items: center;
+}

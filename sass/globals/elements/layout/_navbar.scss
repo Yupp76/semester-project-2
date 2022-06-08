@@ -1,0 +1,89 @@
+.navbar {
+  padding: 1.5rem 0;
+  background-color: $color-p-0-lighter;
+
+  &__head {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__body {
+    padding: 0 5rem;
+    @include respond-to("small") {
+      padding: 0;
+    }
+  }
+
+  &__body .menu {
+    @include respond-to("x-small") {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  }
+
+  &__body .menu__item {
+    @include respond-to("x-small") {
+      padding: 1rem;
+      padding-left: 0;
+    }
+  }
+
+  &__footer {
+    padding: 0 8rem;
+    @include respond-to("small") {
+      padding: 0;
+    }
+  }
+
+  &__footer .menu {
+    @include respond-to("small") {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__footer .menu__coumpound {
+    @include respond-to("small") {
+      padding: 1rem;
+      padding-left: 0;
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__icon,
+  &__item {
+    cursor: pointer;
+  }
+
+  &__icon:hover,
+  &__item:hover {
+    color: $color-p-6;
+  }
+
+  &__icon:not(:last-child) {
+    margin-right: 1.5rem;
+  }
+
+  &__icon:first-child {
+    @include respond-to("small") {
+      display: none;
+    }
+  }
+
+  &__coumpound {
+    display: flex;
+    align-items: center;
+  }
+
+  &__coumpound span {
+    display: inline-block;
+    color: $color-p-6;
+    margin-right: 1rem;
+  }
+}

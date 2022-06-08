@@ -1,0 +1,73 @@
+// Drop shadows
+@mixin add-shadow($shadow) {
+  -webkit-box-shadow: $shadow; // i-o-s <4.3 & Android <4.1
+  box-shadow: $shadow;
+}
+
+// Placeholder text
+@mixin placeholder($color: $color-placeholders) {
+  &:-moz-placeholder {
+    color: $color;
+  } // Firefox 4-18
+  &::-moz-placeholder {
+    color: $color;
+  } // Firefox 19+
+  &:-ms-input-placeholder {
+    color: $color;
+  } // Internet- Explorer 10+
+  &::-webkit-input-placeholder {
+    color: $color;
+  } // Safari and- Chrome
+}
+
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+          + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+@mixin add-borders($color, $bg, $radius: $structure-radius-lg) {
+  border: 1px solid $color;
+  border-radius: $radius;
+  background-color: $bg;
+}
+
+@mixin add-wrapper($type: "prim", $radius: true) {
+  @if ($type == "prim") {
+    @include add-borders($color-borders, $color-p-3);
+  }
+  @if ($type == "sec") {
+    @include add-borders($color-p-1, $color-p-4);
+  }
+  @if ($radius == false) {
+    border-radius: 0;
+  }
+}
+
+@mixin truncate($font-size, $line-height, $lines-to-show) {
+  display: block;
+  display: -webkit-box;
+  max-width: 400px;
+  max-height: $font-size * $line-height * $lines-to-show;
+  font-size: $font-size;
+  line-height: $line-height;
+  -webkit-line-clamp: $lines-to-show;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin add-dark-wrapper($paddings: 1rem 1.25rem 1.5rem) {
+  @include add-borders($color-p-1, $color-p-4, $structure-radius-md);
+  @include add-shadow($effect-smooth-shadow-l1);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: $paddings;
+  width: 100%;
+}

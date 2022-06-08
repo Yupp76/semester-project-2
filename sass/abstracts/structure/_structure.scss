@@ -1,0 +1,46 @@
+$_columns: 12;
+$_gutter-x: 1.5rem !default;
+$_gutter-y: 1.5rem !default;
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -1 * $_gutter-y;
+  margin-right: -0.5 * $_gutter-x;
+  margin-left: -0.5 * $_gutter-x;
+}
+
+$minimal_pairs: (
+  "xsm": 0px,
+  "sm": 660px,
+  "md": 767px,
+  "lg": 992px,
+) !default;
+
+@for $i from 1 through $_columns {
+  $_flex-basis: 100 / $_columns * $i;
+
+  .col-#{$i} {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(#{$_flex-basis}% - #{$_gutter-x});
+    padding-right: $_gutter-x * 0.5;
+    padding-left: $_gutter-x * 0.5;
+    margin-top: $_gutter-y;
+  }
+  .col-offset-#{$i} {
+    margin-left: 100% / $_columns * $i;
+  }
+  @each $bpKey, $bpValue in $class_breakpoints {
+    $min_width: map-get($minimal_pairs, #{$bpKey});
+
+    @media screen and (max-width: #{$bpValue}px) and (min-width: $min_width) {
+      .col-#{$bpKey}-#{$i} {
+        flex-basis: calc(#{$_flex-basis}% - #{$_gutter-x}) !important;
+      }
+      .col-offset-#{$bpKey}-#{$i} {
+        margin-left: calc(#{$_flex-basis}% - #{$_gutter-x}) !important;
+      }
+    }
+  }
+}

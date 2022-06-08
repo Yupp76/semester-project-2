@@ -1,0 +1,223 @@
+.home .S01 {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  background-color: $color-p-0;
+
+  .header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    @include respond-to("small") {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+    }
+
+    img {
+      width: 100%;
+      @include respond-to("small") {
+        margin: auto;
+        max-width: 350px;
+        width: 90%;
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      @include respond-to("small") {
+        align-items: center;
+        text-align: center;
+      }
+    }
+
+    &__content h2 {
+      display: block;
+      color: $color-p-2;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    &__content h1 span {
+      display: block;
+      color: $color-p-4;
+    }
+  }
+}
+
+.home .S02 {
+  $gap-space: 1.5rem;
+
+  .mainProducts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $gap-space;
+    @include respond-to("small") {
+      grid-template-columns: 1fr;
+    }
+    @include respond-to("x-small") {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
+
+  .productsList {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $gap-space;
+    @include respond-to("small") {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include respond-to("x-small") {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+  }
+
+  .productCover {
+    display: flex;
+    position: relative;
+    align-items: center;
+    height: 250px;
+    width: 100%;
+
+    &__content {
+      @include respond-to("x-small") {
+        width: 170px;
+        position: absolute;
+        right: 1.5rem;
+      }
+    }
+
+    &__content h3 {
+      @include respond-to("medium") {
+        font-size: $text-h6;
+        line-height: $text-line-height-sm;
+        font-weight: 500;
+      }
+    }
+
+    &::before {
+      @include respond-to("x-small") {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        right: 0;
+        top: 0;
+      }
+    }
+
+    &:first-child {
+      background-color: #fafafa;
+    }
+
+    &:first-child::before {
+      @include respond-to("x-small") {
+        background-image: linear-gradient(90deg, #fafafa2a, #fafafa 70%);
+      }
+    }
+
+    &:last-child {
+      background-color: #eae9e7;
+    }
+
+    &:last-child::before {
+      @include respond-to("x-small") {
+        background-image: linear-gradient(90deg, #eae9e71c, #eae9e7 70%);
+      }
+    }
+
+    img {
+      height: 100%;
+      width: 200px;
+      object-fit: cover;
+    }
+  }
+
+  .productCat {
+    width: fit-content;
+    position: relative;
+    background-color: #eae9e7;
+    color: $color-p-0-lighter;
+    width: 100%;
+    height: 500px;
+    @include respond-to("medium") {
+      height: 400px;
+    }
+    @include respond-to("x-small") {
+      height: 350px;
+    }
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-color: #0000005d;
+      z-index: 10;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &__content {
+      padding: 2rem;
+      position: absolute;
+      z-index: 100;
+      left: 0;
+      top: 50%;
+      transform: translateY(-120px);
+      @include respond-to("medium") {
+        padding: 1rem;
+      }
+    }
+
+    &__content a {
+      border: 1px solid $color-p-0-lighter;
+      color: $color-p-0-lighter;
+    }
+
+    &__content a:hover {
+      background-color: rgba($color-p-0-lighter, 0.25);
+    }
+  }
+}
+
+.home .S03 {
+  &__bg {
+    height: 450px;
+    width: 100%;
+    background-color: $color-p-0;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &__content {
+    max-width: 350px;
+    width: 90%;
+    background-color: rgba($color-p-0-lighter, 0.85);
+    padding: 2rem 4rem;
+    @include respond-to("x-small") {
+      width: initial;
+      padding: 2rem;
+    }
+  }
+
+  &__content .txt-h6,
+  &__content .txt-sm-bold {
+    font-weight: 800;
+  }
+
+  &__content .txt-sm-bold {
+    text-decoration: line-through;
+  }
+}

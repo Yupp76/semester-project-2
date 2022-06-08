@@ -1,0 +1,28 @@
+@import "./elements/buttons/buttons";
+@import "./elements/separators/separators";
+@import "./elements/fields/fields";
+@import "./elements/layout/navbar";
+@import "./elements/layout/footer";
+@import "./elements/cards/product";
+@import "./elements/loader/loader";
+@import "./elements/cards/minProduct";
+
+.container {
+  width: calc(100% - 3rem);
+  max-width: 1200px;
+  padding: 0 1.5rem;
+  margin: 0 auto;
+  @include respond-to("small") {
+    width: calc(100% - 2rem);
+    padding: 0 1rem;
+  }
+}
+
+.newsletter {
+  justify-content: space-between;
+  @include respond-to("small") {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 1rem;
+  }
+}

@@ -1,0 +1,20 @@
+.products {
+  .S01 {
+    background-color: #dce1da;
+  }
+
+  .S02 {
+    .productsList {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      @include respond-to("small") {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @include respond-to("x-small") {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+    }
+  }
+}

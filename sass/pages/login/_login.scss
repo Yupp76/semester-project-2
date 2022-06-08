@@ -1,0 +1,12 @@
+.login .S01 {
+  .formBox {
+    margin: 5rem auto;
+    max-width: 500px;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    border: 1px solid $color-borders;
+    display: grid;
+    grid-template-rows: auto;
+    gap: 1rem;
+  }
+}

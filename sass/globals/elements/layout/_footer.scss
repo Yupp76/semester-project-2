@@ -1,0 +1,59 @@
+footer {
+  padding: 3rem 0;
+  background-color: $color-primary;
+  color: $color-p-0-lighter;
+
+  .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    @include respond-to("small") {
+      grid-template-columns: repeat(3, 1fr);
+      display: grid;
+      gap: 2rem;
+    }
+    @include respond-to("x-small") {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.footer {
+  &__generic {
+    max-width: 270px;
+    @include respond-to("small") {
+      grid-area: 1 / span 3;
+    }
+    @include respond-to("x-small") {
+      grid-area: 1;
+    }
+  }
+
+  &__generic p,
+  &__menu ul li {
+    color: rgba($color-p-0-lighter, 0.7);
+  }
+
+  &__generic ul:last-child {
+    justify-content: space-between;
+  }
+
+  &__generic ul li {
+    margin-bottom: 0.25rem;
+  }
+
+  &__menu ul li {
+    margin-bottom: 0.25rem;
+  }
+
+  &__menu ul li a {
+    transition: color .4s $easing-expo;
+  }
+
+  &__menu ul li a:hover,
+  &__menu ul li a:focus,
+  &__menu ul li a:focus-within {
+    color: $color-p-0-lighter;
+    text-decoration: underline;
+  }
+}
